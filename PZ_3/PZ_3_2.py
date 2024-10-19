@@ -12,14 +12,4 @@ print('Число нечетно:',x==1)
 ## составит 5%; при вкладе от 100000р. до 150000р. скидка составит 6%; при вкладе от
 ## процентной ставки в зависимости от вносимой суммы.
 
-initial = deposit = 1_000_000
-percent = 16/100
-print(f'начальный депозит: {initial}, годовой процент: {percent*100}')
 
-for month in range(12):
-    income = deposit * percent / 12
-    deposit += income
-    print(f'месяц: {month+1}, доход: {income}, вклад: {deposit}')
-
-year_percent = (deposit - initial) / initial
-print(f'годовой процент с учётом капитализации составил: {year_percent*100}')
