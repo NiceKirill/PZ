@@ -20,4 +20,4 @@ interest_rate = get_interest_rate(deposit)
 if interest_rate is not None:
     print(f"Процентная ставка для вклада {deposit} рублей составляет {interest_rate}%.")
 else:
-    print("Для сумм свыше 200000 рублей процентная ставка не установлена.")
+    print("Для сумм свыше 200000 рублей процентная ставка не установлена.")1
