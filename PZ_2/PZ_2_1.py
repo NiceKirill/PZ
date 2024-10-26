@@ -9,18 +9,18 @@ b = int(input("Введите стоимость ирисок: "))
 y = int(input("Введите вес ирисок: "))
 
 # Расчёт цены за 1 кг
-price_per_kg_chocolate = a / x
-price_per_kg_caramels = b / y
+price_chocolate = a / x
+price_irisok = b / y
 
 # Расчёт, во сколько раз шоколадные конфеты дороже ирисок
-if price_per_kg_caramels != 0:
-    price_factor = price_per_kg_chocolate / price_per_kg_caramels
+if price_irisok != 0:
+    price_factor = price_chocolate / price_irisok
 else:
     price_factor = None # Если цена ирисок равна нулю
 
 # Вывод результатов
-print(f"Цена 1 кг шоколадных конфет: {price_per_kg_chocolate} рублей")
-print(f"Цена 1 кг ирисок: {price_per_kg_caramels} рублей")
+print(f"Цена 1 кг шоколадных конфет: {price_chocolate} рублей")
+print(f"Цена 1 кг ирисок: {price_irisok} рублей")
 
 if price_factor is not None:
     print(f"Шоколадные конфеты дороже ирисок в {price_factor} раз.")
