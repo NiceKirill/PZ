@@ -9,8 +9,8 @@ b = int(input("Введите стоимость ирисок: "))
 y = int(input("Введите вес ирисок: "))
 
 # Расчёт цены за 1 кг
-price_chocolate = a / x
-price_irisok = b / y
+price_chocolate = a/x
+price_irisok = b/y
 
 # Расчёт, во сколько раз шоколадные конфеты дороже ирисок
 if price_irisok != 0:
