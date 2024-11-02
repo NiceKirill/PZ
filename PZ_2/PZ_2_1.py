@@ -17,8 +17,8 @@ try:
     price_factor = price_chocolate / price_irisok
     print(f"Шоколадные конфеты дороже ирисок в {price_factor} раз.")
 except ZeroDivisionError:
-    print("Цена ирисок равна нулю, невозможно рассчитать, во сколько раз шоколадные конфеты дороже.")
+    print("Цена ирисок равна нулю, невозможно рассчитать.")
 
 # Вывод результатов
-print(f"Цена 1 кг шоколадных конфет: {price_chocolate:.2f} рублей")
-print(f"Цена 1 кг ирисок: {price_irisok:.2f} рублей")
+print(f"Цена 1 кг шоколадных конфет: {price_chocolate:} рублей")
+print(f"Цена 1 кг ирисок: {price_irisok:} рублей")
