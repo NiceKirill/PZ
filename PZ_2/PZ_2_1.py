@@ -13,16 +13,12 @@ price_chocolate = a/x
 price_irisok = b/y
 
 # Расчёт, во сколько раз шоколадные конфеты дороже ирисок
-if price_irisok != 0:
+try:
     price_factor = price_chocolate / price_irisok
-else:
-    price_factor = None # Если цена ирисок равна нулю
+    print(f"Шоколадные конфеты дороже ирисок в {price_factor} раз.")
+except ZeroDivisionError:
+    print("Цена ирисок равна нулю, невозможно рассчитать.")
 
 # Вывод результатов
-print(f"Цена 1 кг шоколадных конфет: {price_chocolate} рублей")
-print(f"Цена 1 кг ирисок: {price_irisok} рублей")
-
-if price_factor is not None:
-    print(f"Шоколадные конфеты дороже ирисок в {price_factor} раз.")
-else:
-    print("Цена ирисок равна нулю, невозможно рассчитать.")
+print(f"Цена 1 кг шоколадных конфет: {price_chocolate:} рублей")
+print(f"Цена 1 кг ирисок: {price_irisok:} рублей")
