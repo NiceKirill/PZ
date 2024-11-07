@@ -12,12 +12,12 @@ def get_interest_rate(deposit):
         return 6
     elif deposit < 200000:
         return 7
-    return None
+    raise ValueError("Для сумм свыше 200000 рублей процентная ставка не установлена.")
 
-deposit = float(input("Введите сумму вашего вклада: "))
-interest_rate = get_interest_rate(deposit)
-
-if interest_rate is not None:
+try:
+    deposit = int(input("Введите сумму вашего вклада: "))
+    interest_rate = get_interest_rate(deposit)
     print(f"Процентная ставка для вклада {deposit} рублей составляет {interest_rate}%.")
-else:
-    print("Для сумм свыше 200000 рублей процентная ставка не установлена.")
+
+except ValueError:
+    print("Ошибка: Пожалуйста, введите число.")
