@@ -28,4 +28,4 @@ results_AD = Mean(A, D)
 print(f"Среднее арифметическое и среднее геометрическое для пар:")
 print(f"(A, B) = {results_AB}")
 print(f"(A, C) = {results_AC}")
-print(f"(A, D) = {results_AD}")1
+print(f"(A, D) = {results_AD}")

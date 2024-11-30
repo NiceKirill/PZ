@@ -10,4 +10,4 @@ def print_random_chars():
     print(chars)
 
 # Вызов функции
-print_random_chars()1
+print_random_chars()
