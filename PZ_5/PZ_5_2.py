@@ -18,7 +18,7 @@ def Mean(X, Y):
     return AMean, GMean
 
 # Пример использования функции
-A = -1
+A = 4
 B = 9
 C = 16
 D = 25
