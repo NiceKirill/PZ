@@ -5,6 +5,10 @@
 
 def Mean(X, Y):
 
+    # Проверяем, что числа положительные
+    if X <= 0 or Y <= 0:
+        raise ValueError("Числа должны быть положительными")
+
     # Вычисляем среднее арифметическое
     AMean = (X + Y) / 2
 
@@ -14,7 +18,7 @@ def Mean(X, Y):
     return AMean, GMean
 
 # Пример использования функции
-A = 4
+A = -1
 B = 9
 C = 16
 D = 25
@@ -29,3 +33,4 @@ print(f"Среднее арифметическое и среднее геоме
 print(f"(A, B) = {results_AB}")
 print(f"(A, C) = {results_AC}")
 print(f"(A, D) = {results_AD}")
+
