@@ -16,3 +16,4 @@ def print_random_chars():
 
 # Вызов функции
 print_random_chars()
+
