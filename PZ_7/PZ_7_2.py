@@ -36,3 +36,4 @@ for test in tests:
 
     except ValueError as e:
         print(f'Строка "{test}" -> Ошибка: {e}')
+
