@@ -26,3 +26,4 @@ lst = [3, 2, 7, 5, 6, 4]
 indices, count = find_greater_elements(lst)
 print("Индексы:", indices)
 print("Количество:", count)
+

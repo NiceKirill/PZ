@@ -25,3 +25,4 @@ def zero_elements_between_min_max(lst):
 lst = [3, 8, 9, 12, 15, 10, 11, 14, 13, 16, 17]
 zero_elements_between_min_max(lst)
 print(lst)
+
