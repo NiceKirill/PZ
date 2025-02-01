@@ -4,36 +4,31 @@
 ## в которой расположена первая ошибочная закрывающая скобка, или, если
 ## закрывающих скобок не хватает, число —1.
 
-def check_brackets(s):
-    stack = []  # Стек для хранения позиций открывающих скобок
-    for i, char in enumerate(s):
+def check_brackets(string):
+    stack = []
+
+    for i, char in enumerate(string):
         if char == '(':
-            stack.append(i)  # Помещаем индекс открывающей скобки в стек
+            stack.append(i)
         elif char == ')':
-            if not stack:  # Если стек пуст, значит, закрывающая скобка без пары
-                return i  # Возврат позиции первой ошибочной закрывающей скобки
-            stack.pop()  # Убираем соответствующую открывающую скобку из стека
+            if not stack:
+                return i + 1
+            else:
+                stack.pop()
 
-    # Если после прохода по строке остались символы в стеке, значит, не хватало закрывающих скобок
-    return -1 if stack else 0
+    if stack:
+        return -1
+    else:
+        return 0
 
 
-# Тестирование функции
-tests = [
-    "((()))",  # Балансирован
-    "(()))(",  # Первая ошибочная закрывающая скобка на позиции 4
-    "())",  # Не хватает закрывающих скобок
-    "(())",  # Балансирован
-    ")))",  # Первая ошибочная закрывающая скобка на позиции 0
-    "("  # Не хватает закрывающих скобок
-]
+# Пример использования
+string = "((a+b)*(c-d))"
+print(check_brackets(string))  # Ожидаемый результат: 0
 
-for test in tests:
-    try:
+string = "(a+b)*)"
+print(check_brackets(string))  # Ожидаемый результат: 7
 
-       result = check_brackets(test)
-       print(f'Строка "{test}" -> Результат: {result}')
-
-    except ValueError as e:
-        print(f'Строка "{test}" -> Ошибка: {e}')
+string = "((a+b"
+print(check_brackets(string))  # Ожидаемый результат: -1
 
